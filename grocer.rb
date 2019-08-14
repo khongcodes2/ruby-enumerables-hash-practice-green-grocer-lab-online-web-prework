@@ -23,11 +23,12 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
+  add_to_cart={}
   coupons.each do |item|
     cart.each do |key,value|
       if key == item[:item]
         if value[:count]>=item[:num]
-          cart[key + " W/COUPON"]={
+          add_to_cart[key + " W/COUPON"]={
             :price => item[:cost]/item[:num],
             :clearance => true,
             :count => value[:count]-(value[:count]%item[:num])
@@ -39,6 +40,7 @@ def apply_coupons(cart, coupons)
       cart.delete_if {|key, value| value[:count]==0}
     end
   end
+  binding.pry
   cart
 end
 
