@@ -37,11 +37,11 @@ def apply_coupons(cart, coupons)
           value[:clearance]=true
         end
       end
-      cart.delete_if {|key, value| value[:count]==0}
+     # cart.delete_if {|key, value| value[:count]==0}
     end
   end
   add_to_cart.each{|key,value| cart[key]=value}
-  #binding.pry
+  binding.pry
   cart
 end
 
