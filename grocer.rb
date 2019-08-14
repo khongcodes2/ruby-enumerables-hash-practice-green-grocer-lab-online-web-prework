@@ -1,12 +1,19 @@
 require 'pry'
 
 def consolidate_cart(cart)
-  #turn array to hash
-  #for each item in cart, count how many times it occurs in string
-  cart.each do |item|
-    
+  holder=[]
+  array.each do |item|
+    count_var=array.count(item)
+    holder.push(count_var)
   end
-  binding.pry
+  
+  array.each do|item|
+    item.each {|key, value| value[:count]=holder[array.index(item)]
+  end
+    
+    
+    
+  #binding.pry
   
 end
 
