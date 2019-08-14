@@ -13,6 +13,7 @@ def consolidate_cart(cart)
     item.each do |key, value|
       value[:count]=holder[cart.index(item)]
       new_cart[key]=value
+    end
   end
   
   new_cart
