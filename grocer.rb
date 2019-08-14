@@ -2,18 +2,17 @@ require 'pry'
 
 def consolidate_cart(cart)
   holder=[]
+  new_cart={}
+  
   cart.each do |item|
     count_var=cart.count(item)
     holder.push(count_var)
   end
   
   cart.each do|item|
-    item.each {|key, value| value[:count]=holder[cart.index(item)]}
-  end
-  
-  new_cart={}
-  cart.each do |item|
-    item.each {|key, value| new_cart[key]=value}
+    item.each do |key, value|
+      value[:count]=holder[cart.index(item)]
+      new_cart[key]=value
   end
   
   new_cart
