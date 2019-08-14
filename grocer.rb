@@ -30,7 +30,7 @@ def apply_coupons(cart, coupons)
         if value[:count]>=item[:num]
           add_to_cart[key + " W/COUPON"]={
             :price => item[:cost]/item[:num],
-            :clearance => true,
+            :clearance => value[:clearance],
             :count => value[:count]-(value[:count]%item[:num])
           }
           value[:count]=value[:count]%item[:num]
