@@ -40,7 +40,6 @@ def apply_coupons(cart, coupons)
       cart.delete_if {|key, value| value[:count]==0}
     end
   end
-  binding.pry
   add_to_cart.each{|key,value| cart[key]=value}
   cart
 end
