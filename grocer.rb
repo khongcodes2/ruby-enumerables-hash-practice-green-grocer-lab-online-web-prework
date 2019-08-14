@@ -34,7 +34,7 @@ def apply_coupons(cart, coupons)
             :count => value[:count]-(value[:count]%item[:num])
           }
           value[:count]=value[:count]%item[:num]
-          value[:clearance]=true
+          #value[:clearance]=true
         end
       end
      #cart.delete_if {|key, value| value[:count]==0}
