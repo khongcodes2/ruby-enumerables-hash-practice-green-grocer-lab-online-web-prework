@@ -23,8 +23,10 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  coupons.each do |key, value|
-    cart.each 
+  coupons.each do |item|
+    cart.each do |key,value|
+      
+    end
   end
 end
 
