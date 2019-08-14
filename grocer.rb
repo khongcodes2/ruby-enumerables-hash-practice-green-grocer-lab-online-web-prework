@@ -1,5 +1,13 @@
+require 'pry'
+
 def consolidate_cart(cart)
-  # code here
+  #turn array to hash
+  #for each item in cart, count how many times it occurs in string
+  cart.each do |item|
+    
+  end
+  binding.pry
+  
 end
 
 def apply_coupons(cart, coupons)
