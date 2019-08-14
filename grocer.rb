@@ -36,7 +36,7 @@ def apply_coupons(cart, coupons)
           value[:clearance]=true
         end
       end
-      cart.delete_if
+      cart.delete_if {|key, value| value[:count]==0}
     end
   end
 end
