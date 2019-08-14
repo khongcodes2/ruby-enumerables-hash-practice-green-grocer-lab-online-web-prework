@@ -41,8 +41,8 @@ def apply_coupons(cart, coupons)
     end
   end
   add_to_cart.each{|key,value| cart[key]=value}
-  binding.pry
-  cart
+  #binding.pry
+  puts cart
 end
 
 def apply_clearance(cart)
