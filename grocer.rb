@@ -36,10 +36,8 @@ def apply_coupons(cart, coupons)
           value[:clearance]=true
         end
       end
-      if value[:count]==0
-        cart.delete
-      end
     end
+    cart.delete
   end
 end
 
