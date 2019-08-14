@@ -37,7 +37,7 @@ def apply_coupons(cart, coupons)
         end
       end
       if value[:count]==0
-        
+        cart.delete
       end
     end
   end
