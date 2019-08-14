@@ -33,11 +33,11 @@ def apply_coupons(cart, coupons)
             :count => value[:count]-(value[:count]%item[:num])
           }
           value[:count]=value[:count]%item[:num]
-          if value[:count]==0
-            
-          end
           value[:clearance]=true
         end
+      end
+      if value[:count]==0
+        
       end
     end
   end
